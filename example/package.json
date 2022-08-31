@@ -1,5 +1,5 @@
 {
-  "name": "react-chartist",
+  "name": "preact-chartist-example",
   "scripts": {
     "browser-sync": "browser-sync start --server --files './bundle.js'",
     "build": "esbuild main.jsx --outfile=bundle.js --bundle --jsx-factory=h --jsx-fragment=Fragment",
