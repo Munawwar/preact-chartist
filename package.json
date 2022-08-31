@@ -1,6 +1,6 @@
 {
   "name": "preact-chartist",
-  "version": "0.14.4",
+  "version": "0.15.0",
   "description": "Preact component for Chartist.js",
   "main": "dist/index.js",
   "repository": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Munawwar/preact-chartist",
   "peerDependencies": {
-    "chartist": ">=0",
+    "chartist": ">=1",
     "preact": ">=8"
   },
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/chartist": "^0.9.43",
-    "chartist": "^0.10.1",
+    "chartist": "^1.1.2",
     "esbuild": "^0.15.6",
     "preact": "^8.5.3"
   },

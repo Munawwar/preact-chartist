@@ -31,3 +31,4 @@ node_modules
 # Compiled files
 dist
 example/bundle.js
+example/bundle.js.gz

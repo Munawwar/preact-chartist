@@ -1,10 +1,12 @@
 import { Component, JSX } from 'preact';
 import {
-  // IChartOptions,
-  IResponsiveOptionTuple,
-  ILineChartOptions,
-  IBarChartOptions,
-  IPieChartOptions,
+  // BarChart,
+  // LineChart,
+  // PieChart,
+  BarChartOptions,
+  LineChartOptions,
+  PieChartOptions,
+  ResponsiveOptions,
 } from 'chartist';
 
 export type ChartistGraphCommonProps = {
@@ -16,20 +18,20 @@ export type ChartistGraphCommonProps = {
 
 export type ChartistGraphLineProps = {
   type: 'Line';
-  options?: ILineChartOptions;
-  responseOptions?: Array<IResponsiveOptionTuple<ILineChartOptions>>;
+  options?: LineChartOptions;
+  responseOptions?: ResponsiveOptions<LineChartOptions>;
 };
 
 export type ChartistGraphPieProps = {
   type: 'Pie';
-  options?: IPieChartOptions;
-  responseOptions?: Array<IResponsiveOptionTuple<IPieChartOptions>>;
+  options?: PieChartOptions;
+  responseOptions?: ResponsiveOptions<PieChartOptions>;
 };
 
 export type ChartistGraphBarProps = {
   type: 'Bar';
-  options: IBarChartOptions;
-  responseOptions?: Array<IResponsiveOptionTuple<IBarChartOptions>>;
+  options: BarChartOptions;
+  responseOptions?: ResponsiveOptions<BarChartOptions>;
 };
 
 export type ChartistGraphProps = ChartistGraphCommonProps & (ChartistGraphLineProps | ChartistGraphPieProps | ChartistGraphBarProps);

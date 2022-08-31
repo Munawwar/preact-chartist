@@ -1,6 +1,11 @@
-// @ts-check
 import { h, Component, cloneElement, createRef } from 'preact';
-import Chartist from 'chartist';
+import { BarChart, PieChart, LineChart } from 'chartist';
+
+const chartClassByType = {
+  Bar: BarChart,
+  Pie: PieChart,
+  Line: LineChart,
+};
 
 class ChartistGraph extends Component {
   displayName = 'ChartistGraph'
@@ -30,7 +35,7 @@ class ChartistGraph extends Component {
     if (this.chartist) {
       this.chartist.update(data, options, responsiveOptions);
     } else {
-      this.chartist = new Chartist[type](this.chart.current, data, options, responsiveOptions);
+      this.chartist = new chartClassByType[type](this.chart.current, data, options, responsiveOptions);
 
       if (config.listener) {
         for (event in config.listener) {
