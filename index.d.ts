@@ -1,38 +1,56 @@
 import { Component, JSX } from 'preact';
 import {
+  BaseChart,
+  BarChart,
+  LineChart,
+  PieChart,
   BarChartOptions,
   LineChartOptions,
   PieChartOptions,
   ResponsiveOptions,
 } from 'chartist';
 
-export type ChartistGraphCommonProps = {
+export type ChartistBaseProps = {
   data: object;
   className?: string;
   listener?: any;
   style?: string | {[key: string]: string | number};
 }
 
-export type ChartistGraphLineProps = {
-  type: 'Line';
-  options?: LineChartOptions;
-  responseOptions?: ResponsiveOptions<LineChartOptions>;
-};
-
-export type ChartistGraphPieProps = {
-  type: 'Pie';
-  options?: PieChartOptions;
-  responseOptions?: ResponsiveOptions<PieChartOptions>;
-};
-
-export type ChartistGraphBarProps = {
-  type: 'Bar';
+export type ChartistBarProps = {
   options: BarChartOptions;
-  responseOptions?: ResponsiveOptions<BarChartOptions>;
+  responsiveOptions?: ResponsiveOptions<BarChartOptions>;
 };
 
-export type ChartistGraphProps = ChartistGraphCommonProps & (ChartistGraphLineProps | ChartistGraphPieProps | ChartistGraphBarProps);
+export type ChartistLineProps = {
+  options?: LineChartOptions;
+  responsiveOptions?: ResponsiveOptions<LineChartOptions>;
+};
 
-export default class ChartistGraph extends Component<ChartistGraphProps, {}> {
-  render(props: ChartistGraphProps, state: any): JSX.Element;
+export type ChartistPieProps = {
+  options?: PieChartOptions;
+  responsiveOptions?: ResponsiveOptions<PieChartOptions>;
+};
+
+interface Type<T> extends Function { new (...args: any[]): T; }
+
+export default class ChartistBase<ChartProps> extends Component<ChartistBaseProps & ChartProps, {}> {
+  Component: Type<BaseChart>;
+  baseCSSClassName: string;
+  render(props: ChartistBaseProps & ChartProps, state: any): JSX.Element;
 }
+
+export class ChartistBarChart extends ChartistBase<ChartistBarProps> {
+  type: 'Bar';
+  Component: Type<BarChart>;
+};
+
+export class ChartistLineChart extends ChartistBase<ChartistLineProps> {
+  type: 'Line';
+  Component = Type<LineChart>;
+};
+
+export class ChartistPieChart extends ChartistBase<ChartistPieProps> {
+  type: 'Pie';
+  Component = Type<PieChart>;
+};

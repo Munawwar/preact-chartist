@@ -1,5 +1,6 @@
+// @ts-check
 import { h, render, Component } from 'preact';
-import ChartistGraph from '../index';
+import { ChartistBarChart } from '../index';
 
 class Bar extends Component {
   render() {
@@ -25,7 +26,7 @@ class Bar extends Component {
 
     return (
       <div>
-        <ChartistGraph type='Bar' options={options} className={aspectRatio} data={data} />
+        <ChartistBarChart options={options} className={aspectRatio} data={data} />
       </div>
     )
   }
