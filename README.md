@@ -91,3 +91,7 @@ $ npm ci
 ### License
 
 MIT
+
+### Credits
+
+Thanks to the original [react-chartist](https://github.com/fraserxu/react-chartist) project and it's contributors; from which this project was forked.
