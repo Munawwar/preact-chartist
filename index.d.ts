@@ -1,8 +1,5 @@
 import { Component, JSX } from 'preact';
 import {
-  // BarChart,
-  // LineChart,
-  // PieChart,
   BarChartOptions,
   LineChartOptions,
   PieChartOptions,

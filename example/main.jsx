@@ -1,5 +1,5 @@
 import { h, render, Component } from 'preact';
-import ChartistGraph from '../index.jsx';
+import ChartistGraph from '../index';
 
 class Bar extends Component {
   render() {
@@ -21,15 +21,18 @@ class Bar extends Component {
       }
     };
 
-    var type = 'Bar';
     var aspectRatio = 'ct-octave';
 
     return (
       <div>
-        <ChartistGraph className={aspectRatio} data={data} options={options} type={type} />
+        <ChartistGraph type='Bar' options={options} className={aspectRatio} data={data} />
       </div>
     )
   }
 }
 
-render(<Bar />, document.getElementById('react-chart'))
+render(
+  <Bar />,
+  // @ts-ignore
+  document.getElementById('react-chart'),
+)

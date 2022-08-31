@@ -2,7 +2,7 @@
   "name": "preact-chartist",
   "version": "0.15.0",
   "description": "Preact component for Chartist.js",
-  "main": "dist/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/Munawwar/preact-chartist.git"
@@ -27,14 +27,9 @@
     "chartist": ">=1",
     "preact": ">=8"
   },
-  "scripts": {
-    "build": "mkdir -p dist && esbuild index.jsx --outfile=dist/index.js --jsx-factory=h --jsx-fragment=Fragment && cp index.d.ts dist/index.d.ts",
-    "prepublishOnly": "npm run build"
-  },
   "devDependencies": {
     "@types/chartist": "^0.9.43",
     "chartist": "^1.1.2",
-    "esbuild": "^0.15.6",
     "preact": "^8.5.3"
   },
   "dependencies": {}

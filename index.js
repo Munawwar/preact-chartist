@@ -55,11 +55,15 @@ class ChartistGraph extends Component {
       type,
       data,
     }));
-    return (
-      <div className={`ct-chart ${className || ''}`} ref={this.chart} style={style}>
-        {childrenWithProps}
-      </div>
-    )
+    return /* @__PURE__ */ h(
+      "div",
+      {
+        className: `ct-chart ${className || ""}`,
+        ref: this.chart,
+        style
+      },
+      childrenWithProps
+    );
   }
 }
 
