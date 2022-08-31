@@ -1,18 +1,14 @@
-react-chartist
-==============
+preact-chartist
+===============
 
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][downloads-url]
-
-
-React component for [Chartist.js](https://gionkunz.github.io/chartist-js/)
+Preact component for [Chartist.js](https://gionkunz.github.io/chartist-js/)
 
 ### Installation
 
 ```
-$ npm install react-chartist --save
+$ npm install preact-chartist --save
 ```
-Chartist is a peer dependency to react chartist. You need to install it if you do not have it installed already.
+Chartist is a peer dependency to preact chartist. You need to install it if you do not have it installed already.
 
 ```
 $ npm install chartist --save
@@ -21,9 +17,7 @@ $ npm install chartist --save
 ### Usage
 
 ```JavaScript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ChartistGraph from 'react-chartist';
+import { ChartistBarChart } from 'react-chartist';
 
 class Bar extends React.Component {
   render() {
@@ -45,11 +39,9 @@ class Bar extends React.Component {
       }
     };
 
-    var type = 'Bar'
-
     return (
       <div>
-        <ChartistGraph data={data} options={options} type={type} />
+        <ChartistBarChart data={data} options={options} />
       </div>
     )
   }
@@ -72,7 +64,7 @@ Please check out [Chartist.js API documentation](http://gionkunz.github.io/chart
 To add support for aspect ratio
 
 ```jsx
-<ChartistGraph className={'ct-octave'} data={data} options={options} type={type} />
+<ChartistBarChart className="ct-octave" data={data} options={options} type={type} />
 ```
 
 ### Note
@@ -84,35 +76,18 @@ This module does not include the css files for Chartist. If you want to add it, 
 <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 ```
 
-Or use `bower` or `npm` to install Chartist and include it in your build process.
+Or `npm` to install Chartist and include it in your build process.
 
 ```
 $ npm install chartist
 ```
 
-Or
-
-```
-$ bower install chartist
-```
-
 ### Development
 
 ```
-$ npm install
+$ npm ci
 ```
-
-To build run `npm run build`
-
-### Changelog
-
-If you want to support react version under v0.13, use `npm install react-chartist@0.9.0`
 
 ### License
 
 MIT
-
-[npm-image]: https://img.shields.io/npm/v/react-chartist.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/react-chartist
-[downloads-image]: http://img.shields.io/npm/dm/react-chartist.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/react-chartist
