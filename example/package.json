@@ -2,11 +2,15 @@
   "name": "react-chartist",
   "scripts": {
     "browser-sync": "browser-sync start --server --files './bundle.js'",
-    "watch-js": "watchify main.js -t babelify -o bundle.js -dv",
-    "watch": "npm run browser-sync & npm run watch-js"
+    "build": "esbuild main.jsx --outfile=bundle.js --bundle --jsx-factory=h --jsx-fragment=Fragment"
   },
   "devDependencies": {
     "browser-sync": "^2.10.0",
-    "watchify": "^3.4.0"
+    "esbuild": "^0.15.6",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "chartist": "^0.10.1",
+    "preact": "^8.5.3"
   }
 }

@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ChartistGraph from '../index';
+import { h, render, Component } from 'preact';
+import ChartistGraph from '../index.jsx';
 
-class Bar extends React.Component {
+class Bar extends Component {
   render() {
 
     var data = {
@@ -33,4 +32,4 @@ class Bar extends React.Component {
   }
 }
 
-ReactDOM.render(<Bar />, document.getElementById('react-chart'))
+render(<Bar />, document.getElementById('react-chart'))

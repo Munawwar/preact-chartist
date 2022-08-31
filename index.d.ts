@@ -1,38 +1,39 @@
-import * as React from 'react';
+import { Component, JSX } from 'preact';
 import {
-  IChartOptions,
+  // IChartOptions,
   IResponsiveOptionTuple,
   ILineChartOptions,
   IBarChartOptions,
   IPieChartOptions,
 } from 'chartist';
 
-export interface ChartitGraphProps {
-  type: string;
+export type ChartistGraphCommonProps = {
   data: object;
   className?: string;
-  options?: IChartOptions;
   listener?: any;
-  responsiveOptions?: any;
-  style?: React.CSSProperties;
+  style?: string | {[key: string]: string | number};
 }
 
-export interface ChartitGraphLineProps extends ChartitGraphProps {
+export type ChartistGraphLineProps = {
   type: 'Line';
   options?: ILineChartOptions;
   responseOptions?: Array<IResponsiveOptionTuple<ILineChartOptions>>;
-}
+};
 
-export interface ChartitGraphPieProps extends ChartitGraphProps {
+export type ChartistGraphPieProps = {
   type: 'Pie';
   options?: IPieChartOptions;
   responseOptions?: Array<IResponsiveOptionTuple<IPieChartOptions>>;
-}
+};
 
-export interface ChartitGraphBarProps extends ChartitGraphProps {
+export type ChartistGraphBarProps = {
   type: 'Bar';
   options: IBarChartOptions;
   responseOptions?: Array<IResponsiveOptionTuple<IBarChartOptions>>;
-}
+};
 
-export default class ChartistGraph extends React.Component<ChartitGraphProps> {}
+export type ChartistGraphProps = ChartistGraphCommonProps & (ChartistGraphLineProps | ChartistGraphPieProps | ChartistGraphBarProps);
+
+export default class ChartistGraph extends Component<ChartistGraphProps, {}> {
+  render(props: ChartistGraphProps, state: any): JSX.Element;
+}
