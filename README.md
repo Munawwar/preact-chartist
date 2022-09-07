@@ -70,7 +70,7 @@ Please check out [Chartist.js API documentation](http://gionkunz.github.io/chart
 To add support for aspect ratio
 
 ```jsx
-<ChartistBarChart className="ct-octave" data={data} options={options} type={type} />
+<ChartistBarChart className="ct-octave" data={data} options={options} />
 ```
 
 ### Note
