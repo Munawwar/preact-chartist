@@ -16,7 +16,7 @@ $ npm install chartist --save
 
 ### Usage
 
-```JavaScript
+```js
 import { ChartistBarChart } from 'preact-chartist';
 
 const data = {
@@ -47,12 +47,22 @@ function Bar() {
 ReactDOM.render(<Bar />, document.body)
 ```
 
+### Chart Types
+```js
+import {
+  ChartistBarChart,
+  ChartistLineChart,
+  ChartistPieChart,
+} from 'preact-chartist'
+```
+
+Tree shaking is possible by modern bundlers for classes not imported. 
+
 ### Options
 
 Please check out [Chartist.js API documentation](http://gionkunz.github.io/chartist-js/api-documentation.html) for more details of the options.
 
 * data - chart data (required)
-* type - chart type (required)
 * style - inline css styles (optional)
 * options - chart options (optional)
 * responsive-options - chart responsive options (optional)
