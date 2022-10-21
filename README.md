@@ -6,12 +6,7 @@ Preact component for [Chartist.js](https://gionkunz.github.io/chartist-js/)
 ### Installation
 
 ```
-$ npm install preact-chartist --save
-```
-Chartist is a peer dependency to preact chartist. You need to install it if you do not have it installed already.
-
-```
-$ npm install chartist --save
+$ npm install preact-chartist chartist --save
 ```
 
 ### Usage
@@ -79,7 +74,6 @@ This module does not include the css files for Chartist. If you want to add it, 
 
 ```HTML
 <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 ```
 
 Or `npm` to install Chartist and include it in your build process.
