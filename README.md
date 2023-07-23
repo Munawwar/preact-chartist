@@ -1,7 +1,7 @@
 preact-chartist
 ===============
 
-Preact component for [Chartist.js](https://gionkunz.github.io/chartist-js/)
+Preact component for [Chartist.js](https://gionkunz.github.io/chartist-js/) (Bundle size 15kb gzip, including chartist)
 
 ### Installation
 
