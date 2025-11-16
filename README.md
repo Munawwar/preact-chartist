@@ -83,6 +83,17 @@ Or `npm` to install Chartist and include it in your build process.
 $ npm install chartist
 ```
 
+### A Full example
+
+Check `example` directory
+
+```
+$ cd example && npm install && npm run dev
+```
+
+![Example Screenshot](example/example.png)
+
+
 ### Development
 
 ```

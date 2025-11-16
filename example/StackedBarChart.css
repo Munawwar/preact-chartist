@@ -77,17 +77,17 @@
 }
 
 .StackedBarChart .ct-series-a .ct-bar {
-  stroke: hsl(221.2 83.2% 53.3%);
+  stroke: hsl(250 95% 65%);
   cursor: pointer;
 }
 
 .StackedBarChart .ct-series-b .ct-bar {
-  stroke: hsl(142.1 76.2% 36.3%);
+  stroke: hsl(168 76% 42%);
   cursor: pointer;
 }
 
 .StackedBarChart .ct-series-c .ct-bar {
-  stroke: hsl(24.6 95% 53.1%);
+  stroke: hsl(31 97% 62%);
   cursor: pointer;
 }
 

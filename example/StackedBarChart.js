@@ -75,11 +75,11 @@ export function StackedBarChart({ title, data, seriesNames = [] }) {
   };
 
   const seriesColors = [
-    'hsl(221.2 83.2% 53.3%)',
-    'hsl(142.1 76.2% 36.3%)',
-    'hsl(24.6 95% 53.1%)',
-    'hsl(262.1 83.3% 57.8%)',
-    'hsl(346.8 77.2% 49.8%)'
+    'hsl(250 95% 65%)',      // Vibrant purple
+    'hsl(168 76% 42%)',      // Teal
+    'hsl(31 97% 62%)',       // Warm orange
+    'hsl(340 82% 62%)',      // Pink
+    'hsl(199 89% 55%)'       // Sky blue
   ];
 
   return html`
