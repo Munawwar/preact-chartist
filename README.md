@@ -60,7 +60,8 @@ Please check out [Chartist.js API documentation](http://gionkunz.github.io/chart
 * data - chart data (required)
 * style - inline css styles (optional)
 * options - chart options (optional)
-* responsive-options - chart responsive options (optional)
+* responsiveOptions - chart responsive options (optional)
+* listener - { [eventName: string]: Function } - event listeners object (optional)
 
 To add support for aspect ratio
 
