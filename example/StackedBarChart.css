@@ -1,0 +1,168 @@
+.StackedBarChart {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: hsl(0 0% 100%);
+  border: 1px solid hsl(214.3 31.8% 91.4%);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  position: relative;
+}
+
+.StackedBarChart-header {
+  margin-bottom: 2rem;
+}
+
+.StackedBarChart-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(222.2 84% 4.9%);
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.StackedBarChart-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid hsl(214.3 31.8% 91.4%);
+}
+
+.StackedBarChart-legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.StackedBarChart-legendColor {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  display: block;
+}
+
+.StackedBarChart-legendLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(215.4 16.3% 46.9%);
+}
+
+.StackedBarChart-chartContainer {
+  position: relative;
+}
+
+.StackedBarChart-tooltip {
+  position: absolute;
+  background: hsl(222.2 84% 4.9%);
+  color: hsl(210 40% 98%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.StackedBarChart-tooltip strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.125rem;
+}
+
+.StackedBarChart .ct-series-a .ct-bar {
+  stroke: hsl(221.2 83.2% 53.3%);
+  cursor: pointer;
+}
+
+.StackedBarChart .ct-series-b .ct-bar {
+  stroke: hsl(142.1 76.2% 36.3%);
+  cursor: pointer;
+}
+
+.StackedBarChart .ct-series-c .ct-bar {
+  stroke: hsl(24.6 95% 53.1%);
+  cursor: pointer;
+}
+
+.StackedBarChart .ct-label {
+  font-size: 0.875rem;
+  color: hsl(215.4 16.3% 46.9%);
+  fill: hsl(215.4 16.3% 46.9%);
+}
+
+.StackedBarChart .ct-label.ct-horizontal.ct-end {
+  transform: translateX(-50%) rotate(-30deg);
+  transform-origin: right center;
+  width: auto !important;
+  height: auto !important;
+  display: inline-block;
+  line-height: 1;
+}
+
+.StackedBarChart .ct-labels foreignObject {
+  text-align: center;
+}
+
+.StackedBarChart .ct-grid {
+  stroke: hsl(214.3 31.8% 91.4%);
+}
+
+html.theme-black .StackedBarChart {
+  background: hsl(222.2 84% 4.9%);
+  border-color: hsl(217.2 32.6% 17.5%);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+}
+
+html.theme-black .StackedBarChart-title {
+  color: hsl(210 40% 98%);
+}
+
+html.theme-black .StackedBarChart-legend {
+  border-color: hsl(217.2 32.6% 17.5%);
+}
+
+html.theme-black .StackedBarChart-legendLabel {
+  color: hsl(215.4 16.3% 66.9%);
+}
+
+html.theme-black .StackedBarChart .ct-label {
+  color: hsl(215.4 16.3% 66.9%);
+  fill: hsl(215.4 16.3% 66.9%);
+}
+
+html.theme-black .StackedBarChart .ct-grid {
+  stroke: hsl(217.2 32.6% 17.5%);
+}
+
+html.theme-black .StackedBarChart-tooltip {
+  background: hsl(210 40% 98%);
+  color: hsl(222.2 84% 4.9%);
+  box-shadow: 0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.1);
+}
+
+@media (max-width: 640px) {
+  .StackedBarChart {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+  
+  .StackedBarChart-title {
+    font-size: 1.5rem;
+  }
+  
+  .StackedBarChart-legend {
+    gap: 1rem;
+  }
+  
+  .StackedBarChart-legendLabel {
+    font-size: 0.75rem;
+  }
+}
+
